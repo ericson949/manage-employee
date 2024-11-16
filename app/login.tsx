@@ -59,20 +59,20 @@ export default function SignIn() {
             {errors.password && touched.password && (
               <Text style={LoginStyles.errorText}>{errors.password}</Text>
             )}
+
+            <View 
+            >
+                <Text
+             onPress={(e)=>handleSubmit(e)}
+                style={LoginStyles.signUp}
+                   >
+                    Sign In
+                </Text>
+                </View>
           </>
         )}
       </Formik>
     </View>
-    // <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    //   <Text
-    //     onPress={() => {
-    //       signIn();
-    //       // Navigate after signing in. You may want to tweak this to ensure sign-in is
-    //       // successful before navigating.
-    //       router.replace('/');
-    //     }}>
-    //     Sign In
-    //   </Text>
-    // </View>
+    
   );
 }
